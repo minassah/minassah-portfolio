@@ -1,0 +1,195 @@
+/* Minassah Portfolio - Global Styles */
+
+/* CSS Variables - Light Mode (Default) */
+:root,
+[data-theme="light"] {
+  --color-primary: #1e3a5f;
+  --color-secondary: #9a9ea4;
+  --color-background: #ffffff;
+  --color-background-light: #f8fafc;
+  --color-background-card: #ffffff;
+  --color-text: #1e3a5f;
+  --color-text-muted: #64748b;
+  --color-accent: #2ec4b6;
+  --color-accent-hover: #25a89c;
+  --color-border: #e2e8f0;
+  
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  
+  --max-width: 1200px;
+  --nav-height: 80px;
+  --section-padding: 100px;
+  --border-radius: 12px;
+  --transition: 0.3s ease;
+  
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.12);
+  
+  --nav-bg: rgba(255, 255, 255, 0.8);
+  --nav-bg-scrolled: rgba(255, 255, 255, 0.95);
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+  --color-primary: #1e3a5f;
+  --color-secondary: #9a9ea4;
+  --color-background: #0d1b2a;
+  --color-background-light: #152238;
+  --color-background-card: #1a2d47;
+  --color-text: #f0f4f8;
+  --color-text-muted: #a0aec0;
+  --color-accent: #2ec4b6;
+  --color-accent-hover: #25a89c;
+  --color-border: #2d4a6f;
+  
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.5);
+  
+  --nav-bg: rgba(13, 27, 42, 0.8);
+  --nav-bg-scrolled: rgba(13, 27, 42, 0.95);
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Utility Classes */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Section Styling */
+.section {
+  padding: var(--section-padding) 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+  max-width: 600px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  :root,
+  [data-theme="light"],
+  [data-theme="dark"] {
+    --section-padding: 80px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  :root,
+  [data-theme="light"],
+  [data-theme="dark"] {
+    --section-padding: 60px;
+    --nav-height: 70px;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+}

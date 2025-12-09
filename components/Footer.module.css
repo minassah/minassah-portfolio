@@ -1,0 +1,137 @@
+.footer {
+  background: var(--color-background-light);
+  border-top: 1px solid var(--color-border);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 60px 24px 30px;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  gap: 60px;
+  margin-bottom: 48px;
+}
+
+.brand {
+  max-width: 300px;
+}
+
+.brand img {
+  height: 50px;
+  width: auto;
+  margin-bottom: 16px;
+  transition: filter var(--transition);
+}
+
+[data-theme="dark"] .brand img {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+.tagline {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.linkGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.linkTitle {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.link {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  transition: color var(--transition);
+}
+
+.link:hover {
+  color: var(--color-accent);
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+}
+
+.copyright {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.legal {
+  display: flex;
+  gap: 24px;
+}
+
+.legalLink {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  transition: color var(--transition);
+}
+
+.legalLink:hover {
+  color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+  .main {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .brand {
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  .brand img {
+    margin: 0 auto 16px;
+  }
+  
+  .links {
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+  }
+  
+  .bottom {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .links {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}

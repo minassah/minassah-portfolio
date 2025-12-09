@@ -1,0 +1,166 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.content {
+  max-width: 500px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 14px;
+  background: rgba(46, 196, 182, 0.1);
+  border: 1px solid rgba(46, 196, 182, 0.2);
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: var(--color-accent);
+}
+
+.description {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 32px;
+  padding: 20px 0;
+}
+
+.logoItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoText {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.logoSubtext {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.divider {
+  width: 1px;
+  height: 40px;
+  background: var(--color-border);
+}
+
+.benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.benefitCard {
+  display: flex;
+  gap: 16px;
+  padding: 24px;
+  background: var(--color-background-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  transition: all var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.benefitCard:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.benefitIcon {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary) 100%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.benefitIcon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.benefitTitle {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 4px;
+}
+
+.benefitDescription {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  
+  .content {
+    max-width: 100%;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .benefits {
+    grid-template-columns: 1fr;
+  }
+  
+  .title {
+    font-size: 1.75rem;
+  }
+  
+  .logos {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .divider {
+    display: none;
+  }
+}

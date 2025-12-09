@@ -1,0 +1,101 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.card {
+  background: var(--color-background-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: 40px;
+  transition: all var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.card:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.iconWrapper {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary) 100%);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  color: white;
+}
+
+.iconWrapper svg {
+  width: 32px;
+  height: 32px;
+}
+
+.cardTitle {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 12px;
+}
+
+.cardDescription {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.featureList {
+  list-style: none;
+  margin-bottom: 24px;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.checkIcon {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  color: var(--color-accent);
+}
+
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+}
+
+.techBadge {
+  padding: 6px 12px;
+  background: rgba(46, 196, 182, 0.1);
+  border: 1px solid rgba(46, 196, 182, 0.2);
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+  
+  .card {
+    padding: 32px;
+  }
+}
